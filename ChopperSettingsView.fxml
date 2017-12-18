@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="420.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.76-ea" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox prefHeight="450.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox prefHeight="275.0" prefWidth="300.0">
+               <children>
+                  <TabPane prefHeight="242.0" prefWidth="300.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="Settings">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="177.0" prefWidth="299.0">
+                                 <children>
+                                    <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <HBox prefHeight="8.0" prefWidth="300.0">
+                                             <children>
+                                                <Label prefHeight="31.0" prefWidth="90.0" text="Location:" />
+                                                <ChoiceBox fx:id="locationChoiceBox" prefHeight="31.0" prefWidth="170.0">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" />
+                                                   </HBox.margin>
+                                                </ChoiceBox>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets left="15.0" top="20.0" />
+                                             </VBox.margin>
+                                          </HBox>
+                                          <HBox prefHeight="20.0" prefWidth="300.0">
+                                             <children>
+                                                <Label prefHeight="31.0" prefWidth="90.0" text="Tree Type:" />
+                                                <ChoiceBox fx:id="treeTypeChoiceBox" prefHeight="31.0" prefWidth="170.0">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" />
+                                                   </HBox.margin>
+                                                </ChoiceBox>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets left="15.0" top="15.0" />
+                                             </VBox.margin>
+                                          </HBox>
+                                          <HBox prefHeight="20.0" prefWidth="300.0">
+                                             <children>
+                                                <Label prefHeight="31.0" prefWidth="90.0" text="Chop Mode:" />
+                                                <ChoiceBox fx:id="chopModeChoiceBox" prefHeight="31.0" prefWidth="170.0">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" />
+                                                   </HBox.margin>
+                                                </ChoiceBox>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets left="15.0" top="15.0" />
+                                             </VBox.margin>
+                                          </HBox>
+                                          <CheckBox fx:id="pickUpNestsCheckBox" mnemonicParsing="false" text="Pick up nests">
+                                             <VBox.margin>
+                                                <Insets left="15.0" top="25.0" />
+                                             </VBox.margin>
+                                          </CheckBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab fx:id="customLocationTab" text="Custom Location">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <HBox prefHeight="21.0" prefWidth="300.0">
+                                             <children>
+                                                <Label prefHeight="31.0" prefWidth="73.0" text="Tree Name" />
+                                                <TextField fx:id="treeNameTextField" prefHeight="31.0" prefWidth="128.0">
+                                                   <HBox.margin>
+                                                      <Insets left="17.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets left="10.0" top="15.0" />
+                                             </VBox.margin>
+                                          </HBox>
+                                          <HBox prefHeight="23.0" prefWidth="300.0">
+                                             <children>
+                                                <Label prefHeight="31.0" prefWidth="80.0" text="Scan Radius" />
+                                                <Spinner fx:id="scanRadiusButton" editable="true" prefHeight="31.0" prefWidth="128.0">
+                                                   <HBox.margin>
+                                                      <Insets left="10.0" />
+                                                   </HBox.margin>
+                                                </Spinner>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets left="10.0" top="10.0" />
+                                             </VBox.margin>
+                                          </HBox>
+                                          <Button fx:id="scanAreaButton" mnemonicParsing="false" onAction="#onScanAreaButtonPressed" prefHeight="31.0" prefWidth="300.0" text="Scan This Area">
+                                             <VBox.margin>
+                                                <Insets left="60.0" right="60.0" top="20.0" />
+                                             </VBox.margin>
+                                          </Button>
+                                          <Label fx:id="areaSetLabel" alignment="CENTER" prefHeight="21.0" prefWidth="303.0" text="Area is not set" textFill="#f2261f">
+                                             <VBox.margin>
+                                                <Insets top="15.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+                  <Line endX="299.0" />
+                  <Button fx:id="addTaskButton" alignment="CENTER" mnemonicParsing="false" onAction="#onAddTaskButtonPressed" prefHeight="31.0" prefWidth="314.0" text="Add Task">
+                     <VBox.margin>
+                        <Insets left="60.0" right="60.0" top="50.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#onCancelButtonPressed" prefHeight="31.0" prefWidth="310.0" text="Cancel">
+                     <VBox.margin>
+                        <Insets left="60.0" right="60.0" top="20.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+            <Line endY="420.0" />
+            <VBox prefHeight="450.0" prefWidth="302.0">
+               <children>
+                  <Label text="Stop When">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" top="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <RadioButton fx:id="wcLevelReachesRadioButton" mnemonicParsing="false" text="WC Level Reaches">
+                     <VBox.margin>
+                        <Insets left="10.0" top="20.0" />
+                     </VBox.margin>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="stopConditionTypes" />
+                     </toggleGroup>
+                  </RadioButton>
+                   <Spinner fx:id="wcLevelSpinner" editable="true" prefHeight="31.0" prefWidth="100.0">
+                       <VBox.margin>
+                           <Insets left="35.0" top="10.0" />
+                       </VBox.margin>
+                   </Spinner>
+                  <RadioButton fx:id="logsReachesRadioButton" mnemonicParsing="false" text="Logs Gained Reaches" toggleGroup="$stopConditionTypes">
+                     <VBox.margin>
+                        <Insets left="10.0" top="25.0" />
+                     </VBox.margin>
+                  </RadioButton>
+                   <Spinner fx:id="logsGainedSpinner" editable="true" prefHeight="31.0" prefWidth="100.0">
+                       <VBox.margin>
+                           <Insets left="35.0" top="10.0" />
+                       </VBox.margin>
+                   </Spinner>
+                  <RadioButton fx:id="timeReachesRadioButton" mnemonicParsing="false" text="Task Has Run For" toggleGroup="$stopConditionTypes">
+                     <VBox.margin>
+                        <Insets left="10.0" top="25.0" />
+                     </VBox.margin>
+                  </RadioButton>
+                  <TextField fx:id="timeTextField" prefHeight="31.0" prefWidth="152.0" promptText="hh:mm:ss">
+                     <VBox.margin>
+                        <Insets left="35.0" right="130.0" top="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <HBox prefHeight="15.0" prefWidth="266.0">
+                     <children>
+                        <Label prefHeight="45.0" prefWidth="106.0" text="Offset (minutes)" />
+                        <Label text="?">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="2.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Spinner fx:id="offsetSpinner" editable="true" prefHeight="31.0" prefWidth="113.0">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Spinner>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="35.0" top="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <RadioButton fx:id="neverStopRadioButton" mnemonicParsing="false" selected="true" text="Never Stop" toggleGroup="$stopConditionTypes">
+                     <VBox.margin>
+                        <Insets left="10.0" top="25.0" />
+                     </VBox.margin>
+                  </RadioButton>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
