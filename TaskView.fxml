@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="710.0" xmlns="http://javafx.com/javafx/8.0.76-ea" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <VBox prefHeight="600.0" prefWidth="701.0">
          <children>
@@ -27,12 +27,8 @@
                   </items>
                 </Menu>
                 <Menu fx:id="presetsMenu" mnemonicParsing="false" onAction="#onPresetsMenuPressed" text="Presets" />
-                <Menu fx:id="antibanMenu" mnemonicParsing="false" onAction="#onAntibanMenuPressed" text="Antiban" />
-                  <Menu fx:id="mulingMenu" mnemonicParsing="false" onAction="#onMulingMenuPressed" text="Muling">
-                    <items>
-                      <MenuItem mnemonicParsing="false" text="Action 1" />
-                    </items>
-                  </Menu>
+                <Menu fx:id="antibanMenu" mnemonicParsing="false" onAction="#onAntibanMenuPressed" onHiding="#onAntibanMenuPressed" onShowing="#onAntibanMenuPressed" text="Antiban" />
+                  <Menu fx:id="mulingMenu" mnemonicParsing="false" onAction="#onMulingMenuPressed" onHiding="#onMulingMenuPressed" onShowing="#onMulingMenuPressed" text="Muling" />
                 <Menu fx:id="helpMenu" mnemonicParsing="false" text="Help">
                      <items>
                         <MenuItem fx:id="visitScriptThreadMenuItem" mnemonicParsing="false" onAction="#onVisitScriptMenuItemPressed" text="Visit Script Thread" />
