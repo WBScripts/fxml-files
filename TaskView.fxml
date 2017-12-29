@@ -26,8 +26,10 @@
                     <MenuItem fx:id="loadMenuItem" mnemonicParsing="false" onAction="#onLoadMenuItemPressed" text="Load" />
                   </items>
                 </Menu>
-                <Menu fx:id="presetsMenu" mnemonicParsing="false" onAction="#onPresetsMenuPressed" text="Presets" />
-                <Menu fx:id="antibanMenu" mnemonicParsing="false" onAction="#onAntibanMenuPressed" onHiding="#onAntibanMenuPressed" onShowing="#onAntibanMenuPressed" text="Antiban" />
+                <Menu fx:id="otherSettingsMenu" mnemonicParsing="false" text="Other Settings">
+                     <items>
+                        <MenuItem fx:id="antibanSettingsMenuItem" mnemonicParsing="false" onAction="#onAntibanMenuPressed" text="Antiban Settings" />
+                     </items></Menu>
                   <Menu fx:id="mulingMenu" mnemonicParsing="false" onAction="#onMulingMenuPressed" onHiding="#onMulingMenuPressed" onShowing="#onMulingMenuPressed" text="Muling" />
                 <Menu fx:id="helpMenu" mnemonicParsing="false" text="Help">
                      <items>
