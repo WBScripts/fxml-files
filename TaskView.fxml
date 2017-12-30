@@ -29,6 +29,7 @@
                 <Menu fx:id="otherSettingsMenu" mnemonicParsing="false" text="Other Settings">
                      <items>
                         <MenuItem fx:id="antibanSettingsMenuItem" mnemonicParsing="false" onAction="#onAntibanMenuPressed" text="Antiban Settings" />
+                        <MenuItem fx:id="miscSettingsMenuItem" mnemonicParsing="false" onAction="#miscSettingsMenuItemPressed" text="Misc Settings" />
                      </items></Menu>
                   <Menu fx:id="mulingMenu" mnemonicParsing="false" onAction="#onMulingMenuPressed" onHiding="#onMulingMenuPressed" onShowing="#onMulingMenuPressed" text="Muling" />
                 <Menu fx:id="helpMenu" mnemonicParsing="false" text="Help">
@@ -78,7 +79,7 @@
                               <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                            </columnResizePolicy>
                         </TableView>
-                        <Label fx:id="versionLabel" prefHeight="16.0" prefWidth="371.0" text="Elite Chopper - Version: 1.0.0">
+                        <Label fx:id="versionLabel" prefHeight="16.0" prefWidth="371.0" text="Elite Chopper - Version: 1.1.0">
                            <VBox.margin>
                               <Insets bottom="5.0" left="15.0" />
                            </VBox.margin>
